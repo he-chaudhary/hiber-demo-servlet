@@ -1,5 +1,8 @@
 package com.axelor.hiberDemo.db;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 @Entity
@@ -23,6 +26,9 @@ public class Address {
 	String state;
 	String city;
 
+	@OneToMany(mappedBy = "addr" , cascade={CascadeType.PERSIST, CascadeType.MERGE})
+    private List<Student> studnets = new ArrayList<>();
+	
 	public Address() {	}
 
 	
@@ -64,5 +70,7 @@ public class Address {
 	      this.state = state;
 	   }
 	    
-
+	   public List<Student> getStudents() {
+	        return studnets;
+	   }
 }
