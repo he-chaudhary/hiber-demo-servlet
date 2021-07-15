@@ -26,8 +26,8 @@ public class Address {
 	String state;
 	String city;
 
-	@OneToMany(mappedBy = "addr" , cascade={CascadeType.PERSIST, CascadeType.MERGE})
-    private List<Student> studnets = new ArrayList<>();
+	@ManyToOne
+        private Student student;
 	
 	public Address() {	}
 
@@ -70,7 +70,11 @@ public class Address {
 	      this.state = state;
 	   }
 	    
-	   public List<Student> getStudents() {
-	        return studnets;
+	   public Student getStudents() {
+	        return student;
+	   }
+	   
+	   public void setStudents(Student s) {
+	         student=s;
 	   }
 }
