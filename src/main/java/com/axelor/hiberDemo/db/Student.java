@@ -18,7 +18,7 @@ public class Student {
 	 private Phone phone;
 
 
-	 @OneToMany(cascade=CascadeType.ALL)
+	 @OneToMany(mappedBy="student" , cascade=CascadeType.ALL)
 	 private List<Address> addr = new ArrayList<>();
 		
 	 
