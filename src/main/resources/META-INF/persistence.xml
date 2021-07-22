@@ -15,7 +15,7 @@
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
 
-			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/hiber demo" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/hiberdemo" />
 
 			<property name="javax.persistence.jdbc.user" value="axelor" />
 
